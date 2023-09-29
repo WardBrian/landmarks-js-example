@@ -1,0 +1,12 @@
+(executable
+ (name main)
+ (libraries js_of_ocaml)
+ (js_of_ocaml
+  (javascript_files clock.js))
+ (instrumentation
+  (backend landmarks --auto))
+ (modes js))
+
+(alias
+ (name default)
+ (deps main.bc.js))
